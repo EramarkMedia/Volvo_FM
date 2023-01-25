@@ -1,0 +1,236 @@
+<PropertyList>
+
+<!-- The frames center of gravity is most likely not correct rn. -->
+ <path>Models/Volvo_FM_Frame_785cm.ac</path>
+
+
+<!-- Wheels -->
+
+
+<!-- Front Left -->
+  <model> 
+      <path>Models/Wheel_Front_Left.ac</path>
+      <name>Wheel_Front_Left</name>
+  </model>
+  
+  
+<!-- Front Right -->
+  <model> 
+      <path>Models/Wheel_Front_Right.ac</path>
+      <name>Wheel_Front_Right</name>
+  </model>
+  
+  
+<!-- Rear Left Wheel "Driven" Axle -->
+  <model> 
+      <path>Models/Wheel_Rear_Left_Driven.ac</path>
+      <name>Wheel_Rear_Left_Driven</name>
+  </model>
+  
+  <!-- Rear Left Nuts And Bolts "Driven" Axle -->
+  <model> 
+      <path>Models/Nuts_Bolts_Driven_Rear_Left.ac</path>
+      <name>Nuts_Bolts_Rear_Left_Driven</name>
+  </model>
+  
+  <!-- Rear Left Drum "Driven" Axle -->
+  <model> 
+      <path>Models/Drum_Rear_Axle_Driven_Left.ac</path>
+      <name>Drum_Rear_Left_Driven</name>
+  </model>
+  
+<!-- Rear Right Wheel "Driven" Axle -->
+  <model> 
+      <path>Models/Wheel_Rear_Right_Driven.ac</path>
+      <name>Wheel_Rear_Right_Driven</name>
+  </model>
+  
+<!-- Rear Right Nuts And Bolts "Driven" Axle -->
+  <model> 
+      <path>Models/Nuts_Bolts_Driven_Rear_Right.ac</path>
+      <name>Nuts_Bolts_Rear_Right_Driven</name>
+  </model>
+  
+<!-- Rear Right Drum "Driven" Axle -->
+  <model> 
+      <path>Models/Drum_Rear_Axle_Driven_Right.ac</path>
+      <name>Drum_Rear_Right_Driven</name>
+  </model>
+  
+
+<!-- Rear "Driven" Axle -->
+  <model> 
+      <path>Models/Rear_Axle_Driven.ac</path>
+      <name>Rear_Axle_Driven</name>
+  </model>
+  
+  
+<!-- Rear Axle 1. "Driven".  -->
+ <animation>
+  <type>translate</type>
+  <object-name>Wheel_Rear_Left_Driven</object-name> 
+  <!--<object-name>rwheel2.L</object-name> -->
+  <object-name>Nuts_Bolts_Rear_Left_Driven</object-name> 
+
+  
+  
+  
+  <object-name>Rear_Axle_Driven</object-name> 
+  <object-name>Drum_Rear_Left_Driven</object-name> 
+
+  <property>gear/gear[2]/compression-norm</property>
+<!--
+    <condition>
+        <greater-than-equals>
+          <property>gear/gear[3]/compression-norm</property>
+          <property>gear/gear[2]/compression-norm</property>
+        </greater-than-equals>
+    </condition>
+-->
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>-0.1</dep>
+   </entry>
+   <entry>
+    <ind>1.00</ind>
+    <dep>0.15</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>
+<!--
+  <object-name>rwheel.L</object-name>
+  <object-name>rwheel2.L</object-name>
+  <object-name>rscrews.L</object-name>
+-->
+  <object-name>Wheel_Rear_Right_Driven</object-name>
+  <!--<object-name>rwheel2.R</object-name> -->
+  <object-name>Nuts_Bolts_Rear_Right_Driven</object-name>
+  <object-name>Rear_Axle_Driven</object-name> 
+
+  <object-name>Drum_Rear_Right_Driven</object-name>
+  <property>gear/gear[3]/compression-norm</property>
+<!--
+    <condition>
+        <greater-than>
+          <property>gear/gear[2]/compression-norm</property>
+          <property>gear/gear[3]/compression-norm</property>
+        </greater-than>
+    </condition>
+-->
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>-0.1</dep>
+   </entry>
+   <entry>
+    <ind>1.00</ind>
+    <dep>0.15</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+<!-- NOTE! Unsure about any center's or offsets or whatsoever, from this point on. 
+ They are directly as copied from Willy's Jeep ("Jeep.xml") Currently centers commented out though.
+ All .ac models exported for the Volvo, are with location at (0,0,0) -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Wheel_Rear_Left_Driven</object-name>
+  <!--<object-name>rwheel2.L</object-name> -->
+  <object-name>Nuts_Bolts_Rear_Left_Driven</object-name>
+  
+  <object-name>Wheel_Rear_Right_Driven</object-name>
+  <!--<object-name>rwheel2.R</object-name>-->
+  <object-name>Nuts_Bolts_Rear_Right_Driven</object-name>
+  <object-name>Rear_Axle_Driven</object-name>
+  <object-name>Drum_Rear_Right_Driven</object-name>
+  <object-name>Drum_Rear_Left_Driven</object-name>
+  <property>gear/gear[2]/compression-norm</property>
+  <factor>7.5</factor>
+  <!--<center>
+   <x-m>2.696</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.408</z-m>
+  </center> -->
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Wheel_Rear_Left_Driven</object-name>
+  <object-name>Nuts_Bolts_Rear_Left_Driven</object-name>
+  <object-name>Wheel_Rear_Right_Driven</object-name>
+  <object-name>Nuts_Bolts_Rear_Right_Driven</object-name>
+  <object-name>Rear_Axle_Driven</object-name>
+  <object-name>Drum_Rear_Right_Driven</object-name>
+  <object-name>Drum_Rear_Left_Driven</object-name>
+  <property>gear/gear[3]/compression-norm</property>
+  <factor>7.5</factor>
+ <!-- <center>
+   <x-m>2.696</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.408</z-m>
+  </center> -->
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>Wheel_Rear_Left_Driven</object-name>
+  <object-name>Nuts_Bolts_Rear_Left_Driven</object-name>
+  <object-name>Drum_Rear_Left_Driven</object-name>
+  <property>gear/gear[2]/rollspeed-ms</property>
+  <factor>-15</factor>
+  <!--<center>
+   <x-m>2.696</x-m>
+   <y-m>-0.746</y-m>
+   <z-m>0.408</z-m>
+  </center> -->
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ <animation>
+  <type>spin</type>
+  <object-name>Wheel_Rear_Right_Driven</object-name>
+  <object-name>Nuts_Bolts_Rear_Right_Driven</object-name>
+  <object-name>Drum_Rear_Right_Driven</object-name>
+  <property>gear/gear[3]/rollspeed-ms</property>
+  <factor>-15</factor>
+  <!--<center>
+   <x-m>2.696</x-m>
+   <y-m>-0.746</y-m>
+   <z-m>0.408</z-m>
+  </center> -->
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+	
+</PropertyList>		
