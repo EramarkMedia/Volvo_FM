@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+    
+    <model>
+    <path>Volvo_FM.xml</path>
+  </model>
+  
+  <!-- Add yourself to the list please. -->
+    <sim>
+        <author>Orig: LOCH M.Kraus / Rework: C.H</author>
+        <description>Volvo FM</description>
+        <status>alpha</status>
+        <aircraft-version>0.02</aircraft-version>
+
+        <flight-model>null</flight-model>
+        <aero>null</aero>
+
+        <model>
+            <path>Volvo_FM.xml</path>
+        </model>
+    </sim>
+
+
+<controls>
+	<flight>
+		<aileron alias="/controls/flight/rudder" />
+	</flight>
+
+</controls>
+
+</PropertyList>
