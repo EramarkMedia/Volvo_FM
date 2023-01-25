@@ -4,7 +4,7 @@ OBJECT world
 name "Blender_exporter_v3.3__Volvo_FM_Frame_785cm.ac"
 kids 1
 OBJECT poly
-name "Circle.000_Circle.000"
+name "Base_Frame"
 data 21
 Circle.000_Circle.001
 crease 30.0
